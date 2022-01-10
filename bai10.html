@@ -22,5 +22,12 @@
        return count;
     }
     let key=String(prompt('insert one key'));
-    alert('there are/is '+check(key)+' letter '+key+' in this document');
+    let result=check(key);
+    if(result>=1){
+        alert('there are/is '+check(key)+' letter '+key+' in this document');     
+    }
+    else{
+        alert('-1');
+    }
+    
 </script>

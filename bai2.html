@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function checkstars(star){
+        let star_name=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellation_name=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let i=0;
+        let j='';
+        let flag=false;
+        for(let star_index=0;star_index<star_name.length;star_index++){
+            if(star==star_name[star_index]){
+                i=star_index;
+                flag=true
+                for(let constellation_index=0;constellation_index<constellation_name.length;constellation_index++){
+                    if(i==constellation_index){
+                        j=constellation_name[constellation_index];
+                    }
+                }
+            }
+        }
+        if(flag==true){
+            let result=star+'_'+j;
+            alert(result);
+        }
+        else{
+            alert('we have not had any data about it')
+        }
+    }
+    let stars=prompt('insert star name');
+    checkstars(stars)
+</script>
